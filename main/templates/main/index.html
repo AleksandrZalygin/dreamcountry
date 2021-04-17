@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'main/css/style.css' %}">{% endblock %}
+{% block title %}choose your dream country{% endblock %}
+{% block content %}
+    <div class="main__body">
+        <h1 class="main__title">CHOOSE YOUR DREAM <span>COUNTRY</span></h1>
+        <p class="main__txt">Хочешь переехать в другую страну? Пройди тест и мы подберём идеальные условия для твоего проживания.</p>
+        <a href="{% url 'testform' %}"><button class="main__btn">ПРОЙТИ ТЕСТ</button></a>
+    </div>
+{% endblock %}

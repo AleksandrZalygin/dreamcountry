@@ -1,0 +1,27 @@
+
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Контакты{% endblock %}
+{% block content %}
+    <div class="contacts">
+        <div class="wrap">
+            <img src="{% static 'contacts/img/telegram.png' %}" alt="logo" class="wrap__img">
+            <p class="wrap__label">Telegram</p>
+            <p class="wrap__profil">@Varyamo_Veahtar</p>
+            <p class="wrap__profil">@AJIuK36</p>
+        </div>
+        <div class="wrap">
+            <img src="{% static 'contacts/img/github.png' %}" alt="logo" class="wrap__img">
+            <p class="wrap__label">GitHub</p>
+            <a href="https://github.com/Varyamo123" class="wrap__profil">https://github.com/Varyamo123</a>
+            <a href="https://github.com/Ali36912" class="wrap__profil">https://github.com/Ali36912</a>
+        </div>
+        <div class="wrap">
+            <img src="{% static 'contacts/img/gmail.png' %}" alt="logo" class="wrap__img">
+            <p class="wrap__label">Mail</p>
+            <p class="wrap__profil">alex.zalygin123@gmail.com</p>
+            <p class="wrap__profil">sergeevalibek@gmail.com</p>
+        </div>
+    </div>
+{% endblock %}

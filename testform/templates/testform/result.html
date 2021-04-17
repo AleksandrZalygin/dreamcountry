@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Результат{% endblock %}
+{% block content %}
+    <div class="total-country">
+        <h1 class="total-country__title">Вам подходит <span>{% block country %}{% endblock %}</span>!</h1>
+        {% block img %}{% endblock %}
+        <p class="total__text">{% block text %}{% endblock %}</p>
+        <a href="{% url 'home' %}"><button class="total__btn">НА ГЛАВНУЮ</button></a>
+    </div>
+{% endblock %}

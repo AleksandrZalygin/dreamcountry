@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Тест{% endblock %}
+{% block content %} 
+    <div class="test">
+        <h1 class="test__title">Пройдите небольшой опрос и мы подберём подходящую для вас страну.</h1>
+        <div class="questions">
+            <form action="" method="post" name="form" class="questions__form">
+                {% csrf_token %}
+                
+                <p class="question__title">Какой климат предпочитаете?</p>
+                {{ form.climate }}
+                <p class="question__title">В какой части света хотите жить?</p>
+                {{ form.world }}
+                <p class="question__title">Работать будете всё равно в России?</p>
+                {{ form.work }}
+                <p class="question__title">Важна ли вам бесплатная или дешёвая медицина?</p>
+                {{ form.medicine }}
+                <p class="question__title">Важно ли быстро получить гражданство другой страны?</p>
+                {{ form.citizenship }}
+
+                <span>{{ error }}</span>
+                <a href=""><button type="submit" class="questions__btn">ПОДВЕСТИ ИТОГИ</button></a>
+            </form>
+        </div>
+    </div>
+{% endblock %}
